@@ -21,7 +21,6 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener{
 
 
         seeOrders.setOnClickListener(this)
-        clearOrders.setOnClickListener(this)
 
 
 
@@ -95,11 +94,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener{
                     val intent = Intent(this,MyOrdersActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.clearOrders -> {
 
-                    Toast.makeText(applicationContext,"Your orders have been cleared successfully",Toast.LENGTH_LONG).show()
-
-                }
             }
         }
     }

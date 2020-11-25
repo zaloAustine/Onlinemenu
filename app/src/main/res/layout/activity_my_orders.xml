@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -32,11 +33,11 @@
     </com.google.android.material.card.MaterialCardView>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="403dp"
+        android:layout_height="129dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+        tools:layout_editor_absoluteX="8dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -44,7 +45,7 @@
             android:layout_margin="8dp"
             android:fontFamily="@font/akronim"
             android:gravity="center"
-            android:text="My Orders"
+            android:text="1 Vanilla  120 ksh"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
 
@@ -54,7 +55,7 @@
             android:layout_margin="8dp"
             android:fontFamily="@font/akronim"
             android:gravity="center"
-            android:text="My Orders"
+            android:text="2 Chapo + Beans  120 ksh"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
 
@@ -64,12 +65,57 @@
             android:layout_margin="8dp"
             android:fontFamily="@font/akronim"
             android:gravity="center"
-            android:text="My Orders"
+            android:text="1 CocaCola  40 ksh"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
 
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:fontFamily="@font/akronim"
+        android:text="Total  400 ksh"
+        android:textStyle="bold"
+        android:layout_gravity="right"
+        android:textColor="@android:color/black"
+        android:textSize="22sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/clearOrders"
+            android:layout_margin="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="Clear Orders"
+            android:textColor="@android:color/white"
+            app:cornerRadius="40dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="Complete Orders"
+            android:layout_margin="12dp"
+            android:textColor="@android:color/white"
+            app:cornerRadius="40dp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
